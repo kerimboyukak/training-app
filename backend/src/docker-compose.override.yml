@@ -15,8 +15,8 @@ services:
       - "5000:8080"
       - "5001:8081"
     volumes:
-      # /Microsoft/UserSecrets for windows
-      # /.microsoft/usersecrets for mac
+      # /Microsoft/UserSecrets on Windows
+      # /.microsoft/usersecrets on MacOS
 
       - ${APPDATA:-$HOME/.microsoft}/usersecrets:/home/app/.microsoft/usersecrets:ro
       - ${APPDATA:-$HOME/.aspnet}/https:/home/app/.aspnet/https:ro
