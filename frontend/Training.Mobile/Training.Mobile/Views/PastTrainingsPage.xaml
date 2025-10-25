@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Training.Mobile.Views.PastTrainingsPage"
+             xmlns:model="clr-namespace:Training.Mobile.Models"
+             xmlns:local="clr-namespace:Training.Mobile.ViewModels"  
+             Title="Voorbije Trainingen">
+    <RefreshView Grid.Row="0" Command="{Binding LoadTrainingsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="TrainingListView"
+        ItemsSource="{Binding Trainings}"
+        SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout x:DataType="model:TrainingDetail" Padding="15" Spacing="5">
+                        <Label Text="{Binding Code}" FontSize="Title" FontAttributes="Bold" />
+                        <Label Text="{Binding Description}" FontSize="Body" />
+                        <Label Text="{Binding TimeWindow}" FontSize="Body" TextColor="Gray" />
+
+                        <VerticalStackLayout.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                  NumberOfTapsRequired="1"
+                                  Command="{Binding Source={RelativeSource AncestorType={x:Type local:PastTrainingsViewModel}}, Path=TrainingTapped}"		
+                                  CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                        </VerticalStackLayout.GestureRecognizers>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>

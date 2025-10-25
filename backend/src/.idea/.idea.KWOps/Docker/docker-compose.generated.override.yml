@@ -1,0 +1,75 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  devops.api:
+    build:
+      context: "/Users/Kerim/Projects/Training App .NET/backend/src"
+      dockerfile: "Services/DevOps/DevOps.Api/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/DevOps.Api.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "devopsapi:dev"
+    ports: []
+    volumes:
+    - "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Api:/app:rw"
+    - "/Users/Kerim/Projects/Training App .NET/backend/src:/src:rw"
+    - "/Users/Kerim/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"
+  humanresources.api:
+    build:
+      context: "/Users/Kerim/Projects/Training App .NET/backend/src"
+      dockerfile: "Services/HumanResources/HumanResources.Api/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/HumanResources.Api.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "humanresourcesapi:dev"
+    ports: []
+    volumes:
+    - "/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Api:/app:rw"
+    - "/Users/Kerim/Projects/Training App .NET/backend/src:/src:rw"
+    - "/Users/Kerim/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"
+  identity.ui:
+    build:
+      context: "/Users/Kerim/Projects/Training App .NET/backend/src"
+      dockerfile: "Services/Identity/Identity.UI/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Identity.UI.dll"
+    environment:
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net8.0/Identity.UI.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "identityui:dev"
+    ports: []
+    volumes:
+    - "/Users/Kerim/Projects/Training App .NET/backend/src/Services/Identity/Identity.UI:/app:rw"
+    - "/Users/Kerim/Projects/Training App .NET/backend/src:/src:rw"
+    - "/Users/Kerim/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"
+  training.api:
+    build:
+      context: "/Users/Kerim/Projects/Training App .NET/backend/src"
+      dockerfile: "Services/Training/Training.Api/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Training.Api.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "trainingapi:dev"
+    ports: []
+    volumes:
+    - "/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Api:/app:rw"
+    - "/Users/Kerim/Projects/Training App .NET/backend/src:/src:rw"
+    - "/Users/Kerim/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"

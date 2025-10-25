@@ -1,0 +1,90 @@
+services:
+  humanresources.api:
+    environment:
+      - Urls__IdentityUrlBackChannel=http://identity.ui
+      - EventBus__RabbitMQ__Host=rabbitmq
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/home/app/.aspnet/https/aspnetapp.pfx
+      - DOTNET_HTTPS_CERTIFICATE_PATH=/root/.aspnet/https/aspnetapp.pfx
+      - DOTNET_HTTPS_CERTIFICATE_PASSWORD=
+      - ConnectionStrings__DefaultConnection=Data Source=sqldata;Database=KWops.HumanResources;User Id=sa;Password=Pass@word;TrustServerCertificate=True;
+    ports:
+      - "5000:8080"
+      - "5001:8081"
+    volumes:
+      # /Microsoft/UserSecrets for Windows
+      - ${APPDATA:-$HOME/.microsoft}/usersecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA:-$HOME/.aspnet}/https:/home/app/.aspnet/https:ro
+  devops.api:
+    environment:
+      - Urls__IdentityUrlBackChannel=http://identity.ui
+      - EventBus__RabbitMQ__Host=rabbitmq
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/home/app/.aspnet/https/aspnetapp.pfx
+      - DOTNET_HTTPS_CERTIFICATE_PATH=/root/.aspnet/https/aspnetapp.pfx
+      - DOTNET_HTTPS_CERTIFICATE_PASSWORD=
+      - ConnectionStrings__DefaultConnection=Data Source=sqldata;Database=KWops.DevOps;User Id=sa;Password=Pass@word;TrustServerCertificate=True;
+    ports:
+      - "8000:8080"
+      - "8001:8081"
+    volumes:
+      - ${APPDATA:-$HOME/.microsoft}/usersecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA:-$HOME/.aspnet}/https:/home/app/.aspnet/https:ro
+
+  training.api:
+    environment:
+      - Urls__IdentityUrlBackChannel=http://identity.ui
+      - EventBus__RabbitMQ__Host=rabbitmq
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/home/app/.aspnet/https/aspnetapp.pfx
+      - DOTNET_HTTPS_CERTIFICATE_PATH=/root/.aspnet/https/aspnetapp.pfx
+      - DOTNET_HTTPS_CERTIFICATE_PASSWORD=
+      - ConnectionStrings__DefaultConnection=Data Source=sqldata;Database=KWops.Training;User Id=sa;Password=Pass@word;TrustServerCertificate=True;
+    ports:
+      - "7000:8080"
+      - "7001:8081"
+    volumes:
+      - ${APPDATA:-$HOME/.microsoft}/usersecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA:-$HOME}/.aspnet/https:/home/app/.aspnet/https:ro
+
+  rabbitmq:
+    ports:
+        - "15672:15672"
+        - "5672:5672"
+
+  sqldata:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433" #make db server accessible for host system on port 1433(Server name: localhost)
+    volumes:
+      - kwops-sqldata:/var/opt/mssql
+
+  identity.ui:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ASPNETCORE_HTTPS_PORTS=8081
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/home/app/.aspnet/https/aspnetapp.pfx
+      - DOTNET_HTTPS_CERTIFICATE_PATH=/root/.aspnet/https/aspnetapp.pfx
+      - DOTNET_HTTPS_CERTIFICATE_PASSWORD=
+    ports:
+      - "9000:8080"
+      - "9001:8081"
+    volumes:
+      - ${APPDATA:-$HOME/.microsoft}/usersecrets:/home/app/.microsoft/usersecrets:ro
+      - ${APPDATA:-$HOME}/.aspnet/https:/home/app/.aspnet/https:ro
+volumes:
+  kwops-sqldata:
+    external: false

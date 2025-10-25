@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Training.Mobile.ViewModels"
+             xmlns:converters="clr-namespace:Training.Mobile.Converters"
+             x:Class="Training.Mobile.Views.TrainingDetailPage"
+             Title="Deelnames">
+
+    <ContentPage.Resources>
+        <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <Label Text="{Binding Training.Code}" FontSize="Title" FontAttributes="Bold" />
+
+            <CollectionView ItemsSource="{Binding Training.Participations}" Margin="0,10">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame CornerRadius="10" BorderColor="LightGray" Padding="15" Margin="0,10">
+                            <Grid ColumnDefinitions="*,Auto" VerticalOptions="Center">
+                                <VerticalStackLayout Spacing="10" Grid.Column="0">
+                                    <Label Text="{Binding Apprentice.FirstName}" FontSize="Title" FontAttributes="Bold" />
+                                    <Label Text="{Binding Apprentice.Company}" FontSize="Body"/>
+                                    <HorizontalStackLayout Spacing="5">
+                                        <Label Text="Ervaringspunten:" FontSize="Body" />
+                                        <Label Text="{Binding Apprentice.Xp}" FontSize="Body" />
+                                    </HorizontalStackLayout>
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout Grid.Column="1" Spacing="10" HorizontalOptions="End" VerticalOptions="Center">
+                                    <Switch IsToggled="{Binding IsFinished}"
+                                            IsEnabled="{Binding IsFinished, Converter={StaticResource InverseBooleanConverter}}"
+                                            HorizontalOptions="End">
+                                        <Switch.Triggers>
+                                            <DataTrigger TargetType="Switch" Binding="{Binding IsFinished}" Value="True">
+                                                <Setter Property="ThumbColor" Value="#512BD4" />
+                                                <Setter Property="OnColor" Value="LightGrey" />
+                                            </DataTrigger>
+                                        </Switch.Triggers>
+                                        <Switch.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type local:TrainingDetailViewModel}}, Path=CompleteParticipationCommand}" 
+                                                                  CommandParameter="{Binding .}" />
+                                        </Switch.GestureRecognizers>
+                                    </Switch>
+                                    <Label Text="Training voltooid" 
+                                           TextColor="#512BD4"
+                                           FontAttributes="Bold" 
+                                           HorizontalOptions="End" 
+                                           IsVisible="False">
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding IsFinished}" Value="True">
+                                                <Setter Property="IsVisible" Value="True" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                    <Label Text="Voltooi training"
+                                            IsVisible="{Binding IsFinished, Converter={StaticResource InverseBooleanConverter}}" />
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

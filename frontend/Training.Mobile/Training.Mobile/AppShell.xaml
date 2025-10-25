@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Training.Mobile.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Training.Mobile"
+    xmlns:views="clr-namespace:Training.Mobile.Views"
+
+    Shell.FlyoutBehavior="Flyout"
+    Title="Training.Mobile">
+
+    <TabBar>
+        <ShellContent
+          Title="Main Page"
+          ContentTemplate="{DataTemplate views:MainPage}"
+          Route="MainPage" />
+    </TabBar>
+
+    <FlyoutItem Title="Trainingen">
+        <ShellContent
+         ContentTemplate="{DataTemplate views:TrainingPage}"
+         Route="TrainingPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Account">
+        <ShellContent
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        Route="LoginPage" />
+    </FlyoutItem>
+
+</Shell>

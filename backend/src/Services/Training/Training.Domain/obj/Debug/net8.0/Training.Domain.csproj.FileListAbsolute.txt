@@ -1,0 +1,15 @@
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/bin/Debug/net8.0/Training.Domain.deps.json
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/bin/Debug/net8.0/Training.Domain.dll
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/bin/Debug/net8.0/Training.Domain.pdb
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/bin/Debug/net8.0/Domain.dll
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/bin/Debug/net8.0/Domain.pdb
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/obj/Debug/net8.0/Training.Domain.csproj.AssemblyReference.cache
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/obj/Debug/net8.0/Training.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/obj/Debug/net8.0/Training.Domain.AssemblyInfoInputs.cache
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/obj/Debug/net8.0/Training.Domain.AssemblyInfo.cs
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/obj/Debug/net8.0/Training.Domain.csproj.CoreCompileInputs.cache
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/obj/Debug/net8.0/Training.F4220A08.Up2Date
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/obj/Debug/net8.0/Training.Domain.dll
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/obj/Debug/net8.0/refint/Training.Domain.dll
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/obj/Debug/net8.0/Training.Domain.pdb
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/Training/Training.Domain/obj/Debug/net8.0/ref/Training.Domain.dll

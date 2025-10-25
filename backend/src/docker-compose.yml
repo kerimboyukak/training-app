@@ -1,0 +1,42 @@
+services:
+  humanresources.api:
+    image: ${DOCKER_REGISTRY-}humanresourcesapi
+    build:
+      context: .
+      dockerfile: Services/HumanResources/HumanResources.Api/Dockerfile
+    depends_on:
+      - sqldata
+      - rabbitmq
+
+  devops.api:
+    image: ${DOCKER_REGISTRY-}devopsapi
+    build:
+      context: .
+      dockerfile: Services/DevOps/DevOps.Api/Dockerfile
+    depends_on:
+      - sqldata
+      - rabbitmq
+
+  training.api:
+    image: ${DOCKER_REGISTRY-}trainingapi
+    build:
+      context: .
+      dockerfile: Services/Training/Training.Api/Dockerfile
+    depends_on:
+      - sqldata
+      - rabbitmq
+    environment:
+        - TZ=Europe/Brussels
+
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2022-latest 
+    platform: linux/amd64
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+  identity.ui:
+    image: ${DOCKER_REGISTRY-}identityui
+    build:
+      context: .
+      dockerfile: Services/Identity/Identity.UI/Dockerfile
+

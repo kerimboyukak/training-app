@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Training.Mobile.Views.AddTrainingPage"
+             xmlns:model="clr-namespace:Training.Mobile.Models"
+             xmlns:local="clr-namespace:Training.Mobile.ViewModels"  
+             Title="Voeg nieuwe training toe">
+
+    <ScrollView>
+
+        <VerticalStackLayout 
+            Padding="30,0"
+            Spacing="25">
+
+            <Entry Text="{Binding Name, Mode=TwoWay}" Placeholder="Naam" />
+
+            <Entry Text="{Binding Description, Mode=TwoWay}" Placeholder="Omschrijving" />
+
+            <Label Text="Maximale capaciteit" />
+            <Entry Text="{Binding MaximumCapacity, Mode=TwoWay}"
+               Keyboard="Numeric" />
+
+            <Label Text="Begin" />
+            <DatePicker Date="{Binding StartDate, Mode=TwoWay}" Format="dd/MM/yyyy" />
+            <TimePicker Time="{Binding StartTime, Mode=TwoWay}" Format="HH:mm" />
+
+            <Label Text="Einde" />
+            <DatePicker Date="{Binding EndDate, Mode=TwoWay}" Format="dd/MM/yyyy" />
+            <TimePicker Time="{Binding EndTime, Mode=TwoWay}" Format="HH:mm" />
+
+            <Picker Title="Selecteer een lokaal"
+                ItemsSource="{Binding Rooms}"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding SelectedRoom}" />
+
+            <Button
+                Text="Plan training" 
+                HorizontalOptions="Fill"
+                BackgroundColor="ForestGreen"
+                Command="{Binding AddTrainingCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

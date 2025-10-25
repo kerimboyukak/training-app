@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Training.Mobile.Views.TrainingPage"
+             xmlns:converters="clr-namespace:Training.Mobile.Converters"
+             xmlns:model="clr-namespace:Training.Mobile.Models"
+             xmlns:local="clr-namespace:Training.Mobile.ViewModels"  
+             Title="Trainingen">
+    <ContentPage.Resources>
+        <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+    </ContentPage.Resources>
+
+    <Grid Padding="20" RowDefinitions="*,Auto">
+        <RefreshView x:DataType="local:TrainingViewModel" Grid.Row="0" Command="{Binding LoadTrainingsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+            <CollectionView x:Name="TrainingListView"
+                            ItemsSource="{Binding Trainings}"
+                            SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame x:DataType="model:TrainingDetail" CornerRadius="10" BorderColor="LightGray" Margin="0,10">
+                            <VerticalStackLayout Padding="15" Spacing="5">
+                                <Label Text="{Binding Code}" FontSize="Title" FontAttributes="Bold" />
+                                <Label Text="{Binding Description}" FontSize="Body" />
+                                <Label Text="{Binding TimeWindow}" FontSize="Body" TextColor="Gray" />
+
+                                <Grid ColumnDefinitions="*,*" Margin="0,10,0,0">
+                                    <Button Text="Externe leerling"
+                                            HorizontalOptions="Fill"
+                                            Margin="0,0,5,0"
+                                            IsVisible="{Binding Source={RelativeSource AncestorType={x:Type local:TrainingViewModel}}, Path=IsCoach}"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type local:TrainingViewModel}}, Path=NavigateToAddApprenticeCommand}"
+                                            CommandParameter="{Binding .}"
+                                            Grid.Column="0">
+                                        <Button.Triggers>
+                                            <DataTrigger TargetType="Button" Binding="{Binding IsFull}" Value="True">
+                                                <Setter Property="IsVisible" Value="False" />
+                                            </DataTrigger>
+                                        </Button.Triggers>
+                                    </Button>
+                                    <Button Text="Schrijf in"
+                                            HorizontalOptions="Fill"
+                                            Margin="5,0,0,0"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type local:TrainingViewModel}}, Path=RegisterCommand}"
+                                            CommandParameter="{Binding .}"
+                                            IsEnabled="{Binding IsUserRegistered, Converter={StaticResource InverseBooleanConverter}}"
+                                            Grid.Column="1">
+                                        <Button.Triggers>
+                                            <DataTrigger TargetType="Button" Binding="{Binding IsFull}" Value="True">
+                                                <Setter Property="IsVisible" Value="False" />
+                                            </DataTrigger>
+                                        </Button.Triggers>
+                                    </Button>
+                                    <Label Text="Deze training is volzet"
+                                           TextColor="#512BD4"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           Grid.ColumnSpan="2">
+                                        <Label.Triggers>
+                                            <DataTrigger TargetType="Label" Binding="{Binding IsFull}" Value="False">
+                                                <Setter Property="IsVisible" Value="False" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
+                                </Grid>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+        <VerticalStackLayout Grid.Row="1" Spacing="15" Padding="0,10">
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="15">
+                <Button Text="Nieuwe training"
+                HorizontalOptions="Fill"
+                BackgroundColor="ForestGreen"
+                IsVisible="{Binding IsCoach}"
+                Command="{Binding NavigateToAddTrainingCommand}"
+                Grid.Column="0" />
+                <Button Text="Voorbije trainingen"
+                HorizontalOptions="Fill"
+                IsVisible="{Binding IsCoach}"
+                Command="{Binding NavigateToPastTrainingsCommand}"
+                Grid.Column="1" />
+            </Grid>
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>

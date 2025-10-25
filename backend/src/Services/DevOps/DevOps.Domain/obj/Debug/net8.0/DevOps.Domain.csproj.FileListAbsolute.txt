@@ -1,0 +1,15 @@
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/bin/Debug/net8.0/DevOps.Domain.deps.json
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/bin/Debug/net8.0/DevOps.Domain.dll
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/bin/Debug/net8.0/DevOps.Domain.pdb
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/bin/Debug/net8.0/Domain.dll
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/bin/Debug/net8.0/Domain.pdb
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/obj/Debug/net8.0/DevOps.Domain.csproj.AssemblyReference.cache
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/obj/Debug/net8.0/DevOps.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/obj/Debug/net8.0/DevOps.Domain.AssemblyInfoInputs.cache
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/obj/Debug/net8.0/DevOps.Domain.AssemblyInfo.cs
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/obj/Debug/net8.0/DevOps.Domain.csproj.CoreCompileInputs.cache
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/obj/Debug/net8.0/DevOps.D.FCD15AB9.Up2Date
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/obj/Debug/net8.0/DevOps.Domain.dll
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/obj/Debug/net8.0/refint/DevOps.Domain.dll
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/obj/Debug/net8.0/DevOps.Domain.pdb
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/obj/Debug/net8.0/ref/DevOps.Domain.dll

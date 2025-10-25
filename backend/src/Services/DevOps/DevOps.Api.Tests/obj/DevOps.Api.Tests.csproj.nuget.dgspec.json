@@ -1,0 +1,953 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Api.Tests/DevOps.Api.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Api.Tests/DevOps.Api.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Api.Tests/DevOps.Api.Tests.csproj",
+        "projectName": "DevOps.Api.Tests",
+        "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Api.Tests/DevOps.Api.Tests.csproj",
+        "packagesPath": "/Users/Kerim/.nuget/packages/",
+        "outputPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Api.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/Kerim/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Api/DevOps.Api.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Api/DevOps.Api.csproj"
+              },
+              "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain.Tests/DevOps.Domain.Tests.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain.Tests/DevOps.Domain.Tests.csproj"
+              },
+              "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Api/Api.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Api/Api.csproj"
+              },
+              "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Test/Test.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Test/Test.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.14.0, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Api/DevOps.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Api/DevOps.Api.csproj",
+        "projectName": "DevOps.Api",
+        "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Api/DevOps.Api.csproj",
+        "packagesPath": "/Users/Kerim/.nuget/packages/",
+        "outputPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/Kerim/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.AppLogic/DevOps.AppLogic.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.AppLogic/DevOps.AppLogic.csproj"
+              },
+              "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Infrastructure/DevOps.Infrastructure.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Infrastructure/DevOps.Infrastructure.csproj"
+              },
+              "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Api/Api.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Api/Api.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.3.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.AppLogic/DevOps.AppLogic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.AppLogic/DevOps.AppLogic.csproj",
+        "projectName": "DevOps.AppLogic",
+        "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.AppLogic/DevOps.AppLogic.csproj",
+        "packagesPath": "/Users/Kerim/.nuget/packages/",
+        "outputPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.AppLogic/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/Kerim/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/DevOps.Domain.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/DevOps.Domain.csproj"
+              },
+              "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/IntegrationEvents/IntegrationEvents.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/IntegrationEvents/IntegrationEvents.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MassTransit.Abstractions": {
+              "target": "Package",
+              "version": "[8.2.5, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain.Tests/DevOps.Domain.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain.Tests/DevOps.Domain.Tests.csproj",
+        "projectName": "DevOps.Domain.Tests",
+        "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain.Tests/DevOps.Domain.Tests.csproj",
+        "packagesPath": "/Users/Kerim/.nuget/packages/",
+        "outputPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/Kerim/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/DevOps.Domain.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/DevOps.Domain.csproj"
+              },
+              "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Domain/Domain.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Domain/Domain.csproj"
+              },
+              "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Test/Test.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Test/Test.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.14.0, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/DevOps.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/DevOps.Domain.csproj",
+        "projectName": "DevOps.Domain",
+        "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/DevOps.Domain.csproj",
+        "packagesPath": "/Users/Kerim/.nuget/packages/",
+        "outputPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/Kerim/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Domain/Domain.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Infrastructure/DevOps.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Infrastructure/DevOps.Infrastructure.csproj",
+        "projectName": "DevOps.Infrastructure",
+        "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Infrastructure/DevOps.Infrastructure.csproj",
+        "packagesPath": "/Users/Kerim/.nuget/packages/",
+        "outputPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/Kerim/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.AppLogic/DevOps.AppLogic.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.AppLogic/DevOps.AppLogic.csproj"
+              },
+              "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain.Tests/DevOps.Domain.Tests.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain.Tests/DevOps.Domain.Tests.csproj"
+              },
+              "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/DevOps.Domain.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/DevOps/DevOps.Domain/DevOps.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.4.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/HumanResources.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/HumanResources.Domain.csproj",
+        "projectName": "HumanResources.Domain",
+        "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/HumanResources.Domain.csproj",
+        "packagesPath": "/Users/Kerim/.nuget/packages/",
+        "outputPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/Kerim/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Domain/Domain.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Api/Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Api/Api.csproj",
+        "projectName": "Api",
+        "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Api/Api.csproj",
+        "packagesPath": "/Users/Kerim/.nuget/packages/",
+        "outputPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/Kerim/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Domain/Domain.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.3.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Domain/Domain.csproj",
+        "packagesPath": "/Users/Kerim/.nuget/packages/",
+        "outputPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/Kerim/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/IntegrationEvents/IntegrationEvents.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/IntegrationEvents/IntegrationEvents.csproj",
+        "projectName": "IntegrationEvents",
+        "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/IntegrationEvents/IntegrationEvents.csproj",
+        "packagesPath": "/Users/Kerim/.nuget/packages/",
+        "outputPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/IntegrationEvents/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/Kerim/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/HumanResources.Domain.csproj": {
+                "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/HumanResources.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Test/Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Test/Test.csproj",
+        "projectName": "Test",
+        "projectPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Test/Test.csproj",
+        "packagesPath": "/Users/Kerim/.nuget/packages/",
+        "outputPath": "/Users/Kerim/Projects/Training App .NET/backend/src/SharedKernel/Test/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/Kerim/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.21, 8.0.21]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

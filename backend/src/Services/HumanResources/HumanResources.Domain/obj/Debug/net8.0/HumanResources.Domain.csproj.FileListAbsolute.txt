@@ -1,0 +1,15 @@
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/bin/Debug/net8.0/HumanResources.Domain.deps.json
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/bin/Debug/net8.0/HumanResources.Domain.dll
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/bin/Debug/net8.0/HumanResources.Domain.pdb
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/bin/Debug/net8.0/Domain.dll
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/bin/Debug/net8.0/Domain.pdb
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/obj/Debug/net8.0/HumanResources.Domain.csproj.AssemblyReference.cache
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/obj/Debug/net8.0/HumanResources.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/obj/Debug/net8.0/HumanResources.Domain.AssemblyInfoInputs.cache
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/obj/Debug/net8.0/HumanResources.Domain.AssemblyInfo.cs
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/obj/Debug/net8.0/HumanResources.Domain.csproj.CoreCompileInputs.cache
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/obj/Debug/net8.0/HumanRes.0CABE772.Up2Date
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/obj/Debug/net8.0/HumanResources.Domain.dll
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/obj/Debug/net8.0/refint/HumanResources.Domain.dll
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/obj/Debug/net8.0/HumanResources.Domain.pdb
+/Users/Kerim/Projects/Training App .NET/backend/src/Services/HumanResources/HumanResources.Domain/obj/Debug/net8.0/ref/HumanResources.Domain.dll
